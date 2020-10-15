@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {fab, faFacebook, faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons"
 import {library} from '@fortawesome/fontawesome-svg-core'
+import {Link} from 'react-router-dom'
 
 
 library.add(fab,faFacebook, faTwitter, faInstagram)
@@ -17,7 +18,7 @@ const Foot = () => {
             </div>
             <form onSubmit={(e)=> e.preventDefault()}>
                 <input className='search-bar' type='email' value={email} onChange={handleChange} placeholder='Join our mailing list for exlusive access and promotions'></input>
-                <button className='search-button' type='submit'>Subscribe</button>
+                <Link to='/subscribe'><button className='search-button' type='submit'>Subscribe</button></Link>
             </form>
             <div>
                 <h5 className='mb-0'>Powered by</h5>
