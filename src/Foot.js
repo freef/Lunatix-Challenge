@@ -16,12 +16,12 @@ const Foot = () => {
                 <a className='footer-link' href='/#'><img className='store-icon' src='/playStore.jpg' alt='play store'></img></a>
             </div>
             <form onSubmit={(e)=> e.preventDefault()}>
-                <input type='email' value={email} onChange={handleChange} placeholder='Join our mailing list for exlusive access and promotions'></input>
-                <button type='submit'>Subscribe</button>
+                <input className='search-bar' type='email' value={email} onChange={handleChange} placeholder='Join our mailing list for exlusive access and promotions'></input>
+                <button className='search-button' type='submit'>Subscribe</button>
             </form>
             <div>
-                <h5>Powered by</h5>
-                <h3 className='italic bold'>venmo</h3>
+                <h5 className='mb-0'>Powered by</h5>
+                <h3 className='italic bold venmo'>venmo</h3>
             
             </div>
             <div className='flex column align-center justify-center'>
