@@ -1,17 +1,19 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faUserCircle} from '@fortawesome/fontawesome-free-solid'
 
 const Head = () => (
-    <header> 
-        <img src='#' alt='logo'></img>
-        <nav>
-            <a href='/#'>SPORTS</a>
-            <a href='/#'>CONCERTS</a>
-            <a href='/#'>THEATER</a>
-            <a href='/#'>MORE</a>
+    <header className='flex row justify-around align-center'> 
+        <img className='nav-logo' src='/navLogo.png' alt='logo'></img>
+        <nav className='flex justify-between align-center'>
+            <a className='nav-link m-h' href='/#'>SPORTS</a>
+            <a className='nav-link m-h' href='/#'>CONCERTS</a>
+            <a className='nav-link m-h' href='/#'>THEATER</a>
+            <a className='nav-link m-h' href='/#'>MORE</a>
         </nav>
-        <div>
-            <a href='/#'>MY TICKETS</a>
-            <img src='#' alt='profile icon'></img>
+        <div className='flex align-center'>
+            <a className='nav-link m-h' href='/#'>MY TICKETS</a>
+            <FontAwesomeIcon className='nav-icon' icon='user-circle' />
         </div>
     </header>
 )

@@ -1,13 +1,19 @@
 import React, {useState} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {fab, faFacebook, faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons"
+import {library} from '@fortawesome/fontawesome-svg-core'
+
+
+library.add(fab,faFacebook, faTwitter, faInstagram)
 
 const Foot = () => {
     const [email, setEmail] = useState('')
     const handleChange = event => setEmail(event.target.value)
     return (
-        <footer>
-            <div>
-                <a href='/#'><img src='#' alt='app store'></img></a>
-                <a href='/#'><img src='#' alt='play store'></img></a>
+        <footer className='footer-container flex column justify-center'>
+            <div className='flex row align-center justify-center'>
+                <a className='footer-link' href='/#'><img className='store-icon' src='/appStore.jpg' alt='app store'></img></a>
+                <a className='footer-link' href='/#'><img className='store-icon' src='/playStore.jpg' alt='play store'></img></a>
             </div>
             <form onSubmit={(e)=> e.preventDefault()}>
                 <input type='email' value={email} onChange={handleChange} placeholder='Join our mailing list for exlusive access and promotions'></input>
@@ -15,16 +21,17 @@ const Foot = () => {
             </form>
             <div>
                 <h5>Powered by</h5>
-                <img src='#' alt='Venmo'></img>
+                <h3 className='italic bold'>venmo</h3>
+            
+            </div>
+            <div className='flex column align-center justify-center'>
+                <p className='m-h'><a className='footer-link' href='/#'>About</a> | <a className='footer-link' href='/#'>Support</a> | <a  className='footer-link'href='/#'> Terms and Conditions</a></p>
+                <p className='m-h'>Copyright 2020 SI Tickets | All Rights Reserved</p>
             </div>
             <div>
-                <p><a href='/#'>About</a> | <a href='/#'>Support</a> | <a href='/#'> Terms and Conditions</a></p>
-                <p>Copyright 2020 SI Tickets | All Rights Reserved</p>
-            </div>
-            <div>
-                <img src='#' alt='Twitter' />
-                <img src='#' alt='Facebook' />
-                <img src='#' alt='Instagram' />
+                <FontAwesomeIcon className='footer-icon' icon={['fab','twitter']} />
+                <FontAwesomeIcon className='footer-icon' icon={['fab','facebook']} />
+                <FontAwesomeIcon className='footer-icon' icon={['fab','instagram']} />
             </div>
         </footer>
     )

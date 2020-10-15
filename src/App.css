@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
+body {font-family: 'Montserrat';}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+    text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.m-h {
+    margin: 0.5rem;
+}
+
+.nav-link {
+    color: #696969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .75rem;
+}
+.nav-link:hover {
+    color: #ff4d00; 
+    transition: color .3s;
+}
+.nav-icon {
+    color: #696969;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.nav-logo {
+    height: 50px;
+}
+.footer-icon {
+    color: #FFF;
+    font-size: 1.75rem;
+    padding: 0.25rem;
+    margin: 0.75rem;
+    border: 2px solid #FFF;
+    border-radius: 100%;
+    width: 40px; 
+}
+.footer-container {
+    background-color: #606060;
+    color: #FFF;
+    font-size: 0.75rem;
+}
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.store-icon {
+    width: 100px;
+    margin: 0.75rem;
+    border-radius: .25rem;
+}
+.footer-link {
+    color:#FFF;
+    text-decoration:none;
+}
+.footer-link :hover {
+    color: #ff4d00;
+    transition: color .3s;
+
+}
+.justify-around {
+    justify-content: space-between;
 }
